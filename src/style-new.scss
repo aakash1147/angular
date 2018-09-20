@@ -1,0 +1,75 @@
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$button_background_color: #009688;
+
+
+@font-face {
+  font-family: arial-rounded-bold;
+  src: url('../src/assets/font-family/ARLRDBD.ttf');
+}
+
+@font-face {
+  font-family: arial-rounded-regular;
+  src: url('../src/assets/font-family/unicode.arialr.ttf')
+}
+
+.font_family_bold {
+  font-family: arial-rounded-bold !important;
+}
+.font_family_regular {
+  font-family: arial-rounded-regular !important;
+}
+
+.font_color_lightgrey {
+  color: #9EAEB0 !important;
+}
+
+.font-colour {
+  color: #4A4A4A !important,
+}
+
+.main_background_color {
+  background-color: #EBEFF2 !important;
+}
+
+.font_14px {
+  font-size: 14px;
+}
+
+.font_16px {
+  font-size: 16px;
+}
+
+.font_18px {
+  font-size: 18px;
+}
+.font_20px {
+  font-size: 20px
+}
+.font_22px {
+  font-size: 22px;
+}
+
+.login-card {
+  position: fixed !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0px !important;
+  min-width: 30%;
+  width: 33%;
+
+}
+
+.login_button_width100 {
+  width: 100%;
+}
+
+.button_primary_color {
+  background-color: $button_background_color !important;
+}
+.mat-checkbox-checked {
+
+}
