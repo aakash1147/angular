@@ -1,10 +1,9 @@
 <!--component html goes here -->
-
 <div class="">
     <mat-card class="login-card">
       <div class="card-body">
           <div class="text-center font_family_bold font_22px">
-              Login
+              Registration
           </div>
           <div class="text-center font_family_regular font_14px font_color_lightgrey">
               Become the part of our community
@@ -13,23 +12,26 @@
           <div class="mt-3">
               <form class="example-form">
 
+                <div class="row">
+                  <div class="col-6">
+                      <mat-form-field class="example-full-width">
+                          <input matInput placeholder="First Name" />
+                      </mat-form-field>
+                  </div>
+                  <div class="col-6">
+                      <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Last Name" />
+                      </mat-form-field>
+                  </div>
+                </div>
 
                   <mat-form-field class="example-full-width">
                       <input matInput placeholder="EmailId" />
                   </mat-form-field>
+
                   <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-                      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-                    </mat-form-field>
-
-
-                    <div class="row">
-                      <div class="col-8">
-                        <mat-checkbox formControlName="hideRequired">Remember Me</mat-checkbox>
-
-                      </div>
-                    </div>
-
+                      <input matInput placeholder="Phone No" />
+                  </mat-form-field>
 
 
                   <div class="button-row example-full-width mt-2">
@@ -38,8 +40,8 @@
                 </form>
                 <div class="mt-2">
                   <div class="row">
-                    <div routerLink="/registration" class="col-6 text-left font_14px font_color_lightgrey">
-                        SignUp
+                    <div routerLink="/login" class="col-6 text-left font_14px font_color_lightgrey">
+                      Already Have a Account?
                     </div>
                     <div routerLink="/forgot-password" class="col-6 text-right font_14px font_color_lightgrey">
                         Forget Password?

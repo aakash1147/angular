@@ -5,9 +5,11 @@ import { NgModule } from '@angular/core';
 import { LoginComponent } from './login.component';
 import { LoginRouting } from './login.routing';
 import { DemoMaterialModule } from '../material.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports: [
+      CommonModule,
       DemoMaterialModule,
       LoginRouting
     ],
