@@ -15,27 +15,27 @@
                 <div class="row">
                   <div class="col-6">
                       <mat-form-field class="example-full-width">
-                          <input matInput placeholder="First Name" />
+                          <input matInput [(ngModel)]="registration.firstname" name="firstname" placeholder="First Name" />
                       </mat-form-field>
                   </div>
                   <div class="col-6">
                       <mat-form-field class="example-full-width">
-                          <input matInput placeholder="Last Name" />
+                          <input matInput [(ngModel)]="registration.lastname" name="lastname" placeholder="Last Name" />
                       </mat-form-field>
                   </div>
                 </div>
 
                   <mat-form-field class="example-full-width">
-                      <input matInput placeholder="EmailId" />
+                      <input matInput [(ngModel)]="registration.email" name="email"  placeholder="EmailId" />
                   </mat-form-field>
 
                   <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Phone No" />
+                      <input matInput [(ngModel)]="registration.phoneno" name="phoneno" placeholder="Phone No" />
                   </mat-form-field>
 
 
                   <div class="button-row example-full-width mt-2">
-                    <button type="button" class="login_button_width100 button_primary_color" mat-raised-button color="primary">Registration</button>
+                    <button type="button" class="login_button_width100 button_primary_color" (click)="createUser()" mat-raised-button color="primary">Registration</button>
                   </div>
                 </form>
                 <div class="mt-2">

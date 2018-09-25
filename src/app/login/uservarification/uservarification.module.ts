@@ -2,26 +2,25 @@
 import { NgModule } from '@angular/core';
 
 // This Module's Components
-import { ForgotPosswordComponent } from './forgot-possword.component';
-import { ForgotPasswordRouting } from './forgot-password.routing';
+import { UservarificationComponent } from './uservarification.component';
 import { DemoMaterialModule } from '../../material.module';
-import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { UserVarificationRouting } from './uservarification.routing';
 
 @NgModule({
     imports: [
       CommonModule,
       FormsModule, ReactiveFormsModule,
-      ForgotPasswordRouting,
-      DemoMaterialModule
+      DemoMaterialModule, UserVarificationRouting
     ],
     declarations: [
-        ForgotPosswordComponent,
+        UservarificationComponent,
     ],
     exports: [
-        ForgotPosswordComponent,
+        UservarificationComponent,
     ]
 })
-export class ForgotPosswordModule {
+export class UservarificationModule {
 
 }
