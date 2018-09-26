@@ -25,4 +25,8 @@ export class LoginService {
     varification_Form_Service_On_token_base(dto_data) {
         return this.http.post(this.projectApi.retrive_user_varification_token_bases, dto_data).map(res => res.json());
     }
+
+    active_user (dto_data) {
+        return this.http.post(this.projectApi.active_user, dto_data).map(res => res.json());
+    }
 }

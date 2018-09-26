@@ -38,6 +38,12 @@ export class UservarificationComponent {
 
   varify_user() {
     console.log(this.userVerifiction_dto);
+    this.loginService.active_user(this.userVerifiction_dto).subscribe(
+      data => {
+          console.log(data);
+      }, error => {
+          console.log(error);
+      });
   }
 
 }

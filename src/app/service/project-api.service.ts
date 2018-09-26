@@ -8,4 +8,5 @@ export class projectApi {
     login = this.baseUrl + 'login';
     createUser = this.baseUrl + 'user';
     retrive_user_varification_token_bases = this.baseUrl + 'user/verifyuser';
+    active_user = this.baseUrl + 'user/activeuser';
 }
