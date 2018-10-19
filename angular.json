@@ -31,7 +31,8 @@
               },
               "src/styles.scss",
               "src/style-new.scss",
-              "node_modules/bootstrap/scss/bootstrap.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/style-loader.scss"
             ],
             "scripts": []
           },

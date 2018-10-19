@@ -10,7 +10,7 @@ import { USERVERIFICATION } from './userVarification-mock';
     styleUrls: ['uservarification.component.scss']
 })
 export class UservarificationComponent {
-
+  public hide = true;
   public varifyToken = {
     'token': null,
   };

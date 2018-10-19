@@ -14,8 +14,11 @@
             <form class="example-form">
 
                 <mat-form-field class="example-full-width">
-                    <input matInput disabled placeholder="EmailId" [(ngModel)]="userVerifiction_dto.email" name="email"/>
+                    <input matInput  placeholder="EmailId" [(ngModel)]="userVerifiction_dto.email" name="email"/>
                 </mat-form-field>
+
+
+
 
                 <mat-form-field class="example-full-width">
                     <input matInput [(ngModel)]="userVerifiction_dto.password" name="password" placeholder="Enter Password" [type]="hide ? 'password' : 'text'">
@@ -30,7 +33,7 @@
 
 
                 <div class="button-row example-full-width mt-2">
-                  <button type="button" (click)="varify_user()" class="login_button_width100 button_primary_color" mat-raised-button color="primary">Login</button>
+                  <button type="button" (click)="varify_user()" class="login_button_width100 button_primary_color" mat-raised-button color="primary">Verify</button>
                 </div>
               </form>
               <div class="mt-2">
