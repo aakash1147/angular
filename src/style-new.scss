@@ -1,5 +1,7 @@
 
+@import "~angular-notifier/styles";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 
 $button_background_color: #009688;
 
@@ -67,4 +69,8 @@ $button_background_color: #009688;
 
 .button_primary_color {
   background-color: $button_background_color !important;
+}
+
+.notifier__notification--success {
+  background-color: #313946 !important;
 }

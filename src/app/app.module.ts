@@ -9,6 +9,9 @@ import { LoginModule } from '../app/login/login.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { projectApi } from './service/project-api.service';
 import { HttpModule } from '@angular/http';
+import { notificationService } from './service/notification.service';
+import { NotifierModule } from 'angular-notifier';
+import { customNotifierOptions } from './notificationConfig';
 // import { HttpClient } from './service/custom-http-client.service';
 
 @NgModule({
@@ -16,13 +19,15 @@ import { HttpModule } from '@angular/http';
     AppComponent
   ],
   imports: [
-    BrowserModule, HttpModule,     FormsModule, ReactiveFormsModule,
+    BrowserModule, HttpModule, FormsModule, ReactiveFormsModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
     RouterModule,
-    routing, LoginModule
+    routing, LoginModule,
+
+    NotifierModule.withConfig(customNotifierOptions)
   ],
-  providers: [projectApi],
+  providers: [projectApi, notificationService],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ],
 })

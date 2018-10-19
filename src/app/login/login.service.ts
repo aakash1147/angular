@@ -29,4 +29,8 @@ export class LoginService {
     active_user (dto_data) {
         return this.http.post(this.projectApi.active_user, dto_data).map(res => res.json());
     }
+
+    login_user (dto_data) {
+      return this.http.post(this.projectApi.login, dto_data).map(res => res.json());
+    }
 }

@@ -15,25 +15,25 @@
 
 
                   <mat-form-field class="example-full-width">
-                      <input matInput placeholder="EmailId" />
+                      <input matInput placeholder="EmailId" [(ngModel)]="login_dto.email" name="email" />
                   </mat-form-field>
                   <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                      <input matInput placeholder="Enter your password" [(ngModel)]="login_dto.password" name="password" [type]="hide ? 'password' : 'text'">
                       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
                     </mat-form-field>
 
 
                     <div class="row">
                       <div class="col-8">
-                        <mat-checkbox formControlName="hideRequired">Remember Me</mat-checkbox>
-
+                        <!-- <mat-checkbox formControlName="hideRequired">Remember Me</mat-checkbox> -->
+                        <mat-checkbox >Remember Me</mat-checkbox>
                       </div>
                     </div>
 
 
 
                   <div class="button-row example-full-width mt-2">
-                    <button type="button" class="login_button_width100 button_primary_color" mat-raised-button color="primary">Login</button>
+                    <button type="button" class="login_button_width100 button_primary_color" (click)="get_user_login_token()" mat-raised-button color="primary">Login</button>
                   </div>
                 </form>
                 <div class="mt-2">
