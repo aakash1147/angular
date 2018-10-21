@@ -12,7 +12,8 @@ import { HttpModule } from '@angular/http';
 import { notificationService } from './service/notification.service';
 import { NotifierModule } from 'angular-notifier';
 import { customNotifierOptions } from './notificationConfig';
-// import { HttpClient } from './service/custom-http-client.service';
+import { CookieService } from 'ngx-cookie-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,14 +21,15 @@ import { customNotifierOptions } from './notificationConfig';
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule, ReactiveFormsModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,   HttpClientModule,
     DemoMaterialModule,
     RouterModule,
     routing, LoginModule,
 
     NotifierModule.withConfig(customNotifierOptions)
   ],
-  providers: [projectApi, notificationService],
+  providers: [projectApi, notificationService, CookieService
+  ],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ],
 })

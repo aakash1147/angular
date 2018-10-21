@@ -4,6 +4,7 @@ import { LOGIN } from './login-mock';
 import { LoginService } from './login.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { notificationService } from '../service/notification.service';
+import { CookiesService } from '../service/cookies.service';
 
 @Component({
     selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent {
   public login_dto: loginC = LOGIN;
 
   constructor(private loginService: LoginService,  private activateRoute: ActivatedRoute,
-    private router: Router, private NotificationService: notificationService) {
+    private router: Router, private NotificationService: notificationService,
+    private cookiesService: CookiesService) {
   }
 
   get_user_login_token () {
@@ -24,7 +26,9 @@ export class LoginComponent {
     this.loginService.login_user(this.login_dto).subscribe(
       data => {
         console.log(data);
-        this.NotificationService.get_Notification('success', 'Login Successfuffy');
+        this.cookiesService.set_token(data.token);
+        this.get_user_data_me ();
+        // this.NotificationService.get_Notification('success', 'Login Successfuffy');
       }, error => {
         this.NotificationService.get_Notification('error', 'Unable to login');
         console.log(error);
@@ -32,5 +36,13 @@ export class LoginComponent {
     )
   }
 
+  get_user_data_me () {
+      this.loginService.me().subscribe(
+        data => {
+          console.log(data);
+        }, error => {
+          console.log(error);
+        })
+  }
 
 }
